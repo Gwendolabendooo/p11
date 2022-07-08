@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+
+import Tag from './components/Tag'
+import Header from './components/Header'
+import Thumb from './components/Thumb'
+import List from './components/list'
+
+import data from './data/data.json'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header name="test"></Header>
+      <Tag name="Paris 10"></Tag>
+      <Thumb name="test" data={data[0]}></Thumb>
+      <List name="test" data={data[0]}></List>
     </div>
   );
 }
