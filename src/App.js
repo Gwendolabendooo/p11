@@ -5,6 +5,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from './views/Home'
 import Habitation from './views/Habitation'
+import About from './views/About'
+import Error from './views/error'
 
 import data from './data/data.json'
 
@@ -16,7 +18,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home data={data}></Home>} />
         <Route path="/Habitation" element={<Habitation data={data}></Habitation>} />
-        <Route path="*" element={"pas de page"} />
+        <Route path="/About" element={<About></About>} />
+        <Route path="*" element={<Error></Error>} />
       </Routes>
     </BrowserRouter>
   );
