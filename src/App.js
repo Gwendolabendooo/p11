@@ -1,21 +1,26 @@
 import './App.scss';
 
-import Tag from './components/Tag'
-import Header from './components/Header'
-import Thumb from './components/Thumb'
-import List from './components/list'
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Home from './views/Home'
+import Habitation from './views/Habitation'
 
 import data from './data/data.json'
 
-function App() {
+console.log(data[0])
+
+export default function App() {
   return (
-    <div className="App">
-      <Header name="test"></Header>
-      <Tag name="Paris 10"></Tag>
-      <Thumb name="test" data={data[0]}></Thumb>
-      <List name="test" data={data[0]}></List>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home data={data}></Home>} />
+        <Route path="/Habitation" element={<Habitation data={data}></Habitation>} />
+        <Route path="*" element={"pas de page"} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
-export default App;
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);

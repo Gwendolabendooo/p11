@@ -16,3 +16,18 @@ body{
 .cursor-pointer{
   cursor: pointer;
 }
+
+.place-center{
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
