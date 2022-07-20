@@ -18,7 +18,7 @@ const About = ({ data }) => {
                     <div className="w-100 h-100 position-absolute place-center" style={{left: 50+"%", top: 50+"%", backgroundColor: "rgb(0 0 0 / 44%)"}}>
                     </div>
                 </div>
-                <div className="m-5">
+                <div className="ctn-about" style={{margin: 3+"rem"}}>
                     <List title="Fiabilité" data={"Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes."}></List>
                     <List title="Respect" data={"La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme."}></List>
                     <List title="Service" data={"Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question."}></List>

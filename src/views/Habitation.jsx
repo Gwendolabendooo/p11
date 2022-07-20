@@ -48,28 +48,28 @@ const Habitation = ({ data }) => {
                             })}
                         </div>
                     </div>
-                    <div>
+                    <div className="ctn-rate-picture">
                         <div className="d-flex align-items-center">
                             <div className="text-danger m-2">
                                 {currentData.host.name}
                             </div>
                             <img src={currentData.host.picture} className="rounded-circle" style={{width: 70+"px"}} alt="" />
                         </div>
-                        <div>
+                        <div className="text-end">
                             {note.map(stared => {
                                 if(stared === 'starColored'){
                                     return(
-                                        <img src={starColored} alt="star"></img>
+                                        <img src={starColored} style={{marginLeft: 5+"px"}} alt="star"></img>
                                     )
                                 }
                                 return(
-                                    <img src={star} alt="star"></img>
+                                    <img src={star} style={{marginLeft: 5+"px"}} alt="star"></img>
                                 )
                             })}
                         </div>
                     </div>
                 </div>
-                <div className="d-flex flex-row justify-content-between" style={{marginTop: 20+"px"}}>
+                <div className="d-flex flex-row justify-content-between ctn-about-people" style={{marginTop: 20+"px"}}>
                     <div className="w-50 h-100" style={{marginRight: 40+"px"}}>
                         <List title="Description" data={currentData.description}></List>
                     </div>
