@@ -26,7 +26,7 @@ const Home = ({ data }) => {
                     {
                         data.map(logement => {
                             return(
-                                <Thumb data={logement}></Thumb>
+                                <Thumb data={logement} key={logement.id}></Thumb>
                             )
                         })
                     }
